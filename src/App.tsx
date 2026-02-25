@@ -99,24 +99,26 @@ const Hero = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Request an Estimate</h3>
               <p className="text-gray-500 mb-6 text-sm">Fill out the form below and our team will contact you shortly.</p>
 
-              <div className="ghl-iframe-container">
-                <iframe
-                  src="https://link.sunfieldmarketing.com/widget/form/zKUf7HPtykX0BBRc8KNv"
-                  style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
-                  id="inline-zKUf7HPtykX0BBRc8KNv"
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="Form 2"
-                  data-height="487"
-                  data-layout-iframe-id="inline-zKUf7HPtykX0BBRc8KNv"
-                  data-form-id="zKUf7HPtykX0BBRc8KNv"
-                  title="Form 2"
-                ></iframe>
+              <div className="ghl-form-wrap">
+                <div className="ghl-iframe-container">
+                  <iframe
+                    src="https://link.sunfieldmarketing.com/widget/form/zKUf7HPtykX0BBRc8KNv"
+                    style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                    id="inline-zKUf7HPtykX0BBRc8KNv"
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Form 2"
+                    data-height="492"
+                    data-layout-iframe-id="inline-zKUf7HPtykX0BBRc8KNv"
+                    data-form-id="zKUf7HPtykX0BBRc8KNv"
+                    title="Form 2"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </motion.div>
