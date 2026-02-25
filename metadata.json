@@ -1,0 +1,5 @@
+{
+  "name": "A.G Landscape & Irrigation",
+  "description": "Professional landscaping and irrigation services in Chula Vista, CA. Expert lawn care, smart irrigation, and landscape design.",
+  "requestFramePermissions": ["geolocation"]
+}
