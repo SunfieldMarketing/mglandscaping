@@ -116,13 +116,13 @@
 
 /* Tally iframe container */
 .ghl-iframe-container {
-  min-height: 700px;
+  min-height: 762px;
   width: 100%;
 }
 
 .ghl-iframe-container iframe {
   width: 100% !important;
-  min-height: 700px;
+  min-height: 762px;
   border: none;
   border-radius: 3px;
 }
