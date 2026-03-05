@@ -102,21 +102,14 @@ const Hero = () => {
               <div className="ghl-form-wrap">
                 <div className="ghl-iframe-container">
                   <iframe
-                    src="https://link.sunfieldmarketing.com/widget/form/zKUf7HPtykX0BBRc8KNv"
-                    style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
-                    id="inline-zKUf7HPtykX0BBRc8KNv"
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="Form 2"
-                    data-height="492"
-                    data-layout-iframe-id="inline-zKUf7HPtykX0BBRc8KNv"
-                    data-form-id="zKUf7HPtykX0BBRc8KNv"
-                    title="Form 2"
+                    data-tally-src="https://tally.so/embed/gD5BpJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    loading="lazy"
+                    width="100%"
+                    height="747"
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                    title="AG Landscape Lead Form"
                   ></iframe>
                 </div>
               </div>

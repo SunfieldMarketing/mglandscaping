@@ -4,15 +4,19 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Playfair Display", serif;
-  --color-primary: #15803d; /* green-700 */
-  --color-primary-light: #22c55e; /* green-500 */
-  --color-primary-dark: #14532d; /* green-900 */
+  --color-primary: #15803d;
+  /* green-700 */
+  --color-primary-light: #22c55e;
+  /* green-500 */
+  --color-primary-dark: #14532d;
+  /* green-900 */
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
+
   body {
     @apply bg-white text-gray-900;
   }
@@ -34,7 +38,7 @@
   background: #ffffff;
   border-radius: 24px;
   padding: 24px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
   position: relative;
   max-width: 600px;
   margin: auto;
@@ -96,7 +100,7 @@
   font-size: 18px;
   font-weight: 600;
   border: none;
-  box-shadow: 0 8px 20px rgba(30,125,60,.25);
+  box-shadow: 0 8px 20px rgba(30, 125, 60, .25);
   cursor: pointer;
   transition: background 0.2s, transform 0.15s;
 }
@@ -110,15 +114,15 @@
   transform: scale(0.98);
 }
 
-/* GHL iframe container */
+/* Tally iframe container */
 .ghl-iframe-container {
-  min-height: 500px;
+  min-height: 700px;
   width: 100%;
 }
 
 .ghl-iframe-container iframe {
   width: 100% !important;
-  min-height: 487px;
+  min-height: 700px;
   border: none;
   border-radius: 3px;
 }
