@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Star
 } from 'lucide-react';
+import { TallyForm } from '../components/TallyForm';
 
 export const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -130,16 +131,7 @@ export const ServicePage = () => {
 
                 <div className="ghl-form-wrap">
                   <div className="ghl-iframe-container">
-                    <iframe
-                      data-tally-src="https://tally.so/embed/gD5BpJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                      loading="lazy"
-                      width="100%"
-                      height="762"
-                      frameBorder="0"
-                      marginHeight={0}
-                      marginWidth={0}
-                      title="AG Landscape Lead Form"
-                    ></iframe>
+                    <TallyForm />
                   </div>
                 </div>
 

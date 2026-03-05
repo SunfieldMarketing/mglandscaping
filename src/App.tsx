@@ -22,6 +22,7 @@ import { Link, BrowserRouter as Router, Routes, Route, useLocation } from 'react
 import { servicesData } from './servicesData';
 import { Layout } from './components/Layout';
 import { ServicePage } from './pages/ServicePage';
+import { TallyForm } from './components/TallyForm';
 
 // --- Home Page Components ---
 
@@ -101,16 +102,7 @@ const Hero = () => {
 
               <div className="ghl-form-wrap">
                 <div className="ghl-iframe-container">
-                  <iframe
-                    data-tally-src="https://tally.so/embed/gD5BpJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                    loading="lazy"
-                    width="100%"
-                    height="762"
-                    frameBorder="0"
-                    marginHeight={0}
-                    marginWidth={0}
-                    title="AG Landscape Lead Form"
-                  ></iframe>
+                  <TallyForm />
                 </div>
               </div>
             </div>
@@ -486,7 +478,7 @@ const HomePage = () => {
               <p className="text-lg sm:text-xl text-green-100 mb-10 sm:mb-12 max-w-2xl mx-auto">
                 Join hundreds of satisfied homeowners in Chula Vista. Get your free, no-obligation estimate today.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+              <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-12">
                 <a
                   href="#quote"
                   className="bg-white hover:bg-gray-50 text-primary-dark px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl transition-all shadow-xl"
@@ -499,6 +491,10 @@ const HomePage = () => {
                 >
                   Call 951-858-0669
                 </a>
+              </div>
+
+              <div className="bg-white p-6 sm:p-10 rounded-2xl shadow-xl max-w-2xl mx-auto overflow-hidden">
+                <TallyForm />
               </div>
             </div>
           </div>
