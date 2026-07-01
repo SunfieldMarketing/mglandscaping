@@ -30,7 +30,7 @@ export const AboutPage = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/img/team_working_faceless_1782922187655.png"
@@ -38,7 +38,7 @@ export const AboutPage = () => {
             className="w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-primary-dark/60 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary-dark/50 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -58,8 +58,9 @@ export const AboutPage = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.015]"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Our Mission</h2>
@@ -95,9 +96,41 @@ export const AboutPage = () => {
         </div>
       </section>
 
+      {/* The MG Difference */}
+      <section className="py-32 bg-primary-dark text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary rounded-full blur-[100px] opacity-30 -mr-[300px] -mt-[300px]"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">The MG Difference</h2>
+              <h3 className="text-4xl font-display font-extrabold mb-6">Built on Trust, Delivered with Excellence</h3>
+              <p className="text-lg text-green-50 mb-6 leading-relaxed">
+                What sets us apart isn't just the quality of our equipment or the breadth of our services—it's our unwavering commitment to the customer experience.
+              </p>
+              <p className="text-lg text-green-50 mb-8 leading-relaxed">
+                We know that inviting a team onto your property requires trust. That's why every member of our crew is thoroughly vetted, highly trained, and deeply respectful of your home. We show up when we say we will, we do exactly what we promised, and we never leave a mess behind.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-[2rem] border border-white/20 text-center transform transition-transform hover:-translate-y-2">
+                <p className="text-5xl font-display font-bold text-primary-light mb-2">15+</p>
+                <p className="text-sm font-semibold uppercase tracking-wider text-green-50">Years Servicing</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-[2rem] border border-white/20 text-center transform transition-transform hover:-translate-y-2 translate-y-8">
+                <p className="text-5xl font-display font-bold text-primary-light mb-2">100%</p>
+                <p className="text-sm font-semibold uppercase tracking-wider text-green-50">Local Roots</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Core Values */}
-      <section className="py-32 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-gray-50 border-t border-gray-100 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Core Values</h2>
             <h3 className="text-4xl font-display font-extrabold text-gray-900">What Drives Us</h3>
@@ -117,6 +150,23 @@ export const AboutPage = () => {
                 <p className="text-gray-600">{val.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.015]"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-display font-extrabold text-gray-900 mb-6">Ready to Transform Your Landscape?</h2>
+          <p className="text-xl text-gray-600 mb-10">Join hundreds of satisfied homeowners in San Marcos. Get your free estimate today.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="/contact" className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl shadow-primary/30 hover:-translate-y-1">
+              Request a Free Quote
+            </a>
+            <a href="tel:7604023315" className="glass-morphism hover:bg-white text-gray-800 px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:-translate-y-1">
+              Call 760-402-3315
+            </a>
           </div>
         </div>
       </section>

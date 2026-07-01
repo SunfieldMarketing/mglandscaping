@@ -28,8 +28,9 @@ export const ContactPage = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16">
             
             {/* Contact Info & Hours */}

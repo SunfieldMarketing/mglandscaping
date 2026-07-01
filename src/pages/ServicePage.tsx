@@ -149,8 +149,9 @@ export const ServicePage = () => {
       </section>
 
       {/* The Process Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.015]"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">How It Works</h2>
             <h3 className="text-4xl font-display font-extrabold text-gray-900">Our {service.title} Process</h3>
@@ -176,8 +177,9 @@ export const ServicePage = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-32 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-32 bg-gray-50 border-t border-gray-100 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-display font-extrabold text-gray-900 mb-6">Ready to get started?</h2>
           <p className="text-xl text-gray-600 mb-10">Contact us today to schedule your {service.title.toLowerCase()} service.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -192,8 +194,9 @@ export const ServicePage = () => {
       </section>
 
       {/* Other Services Section */}
-      <section className="py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-3xl font-display font-bold text-gray-900 mb-12">Other Professional Services</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {servicesData.filter(s => s.id !== service.id).slice(0, 3).map((s, idx) => (

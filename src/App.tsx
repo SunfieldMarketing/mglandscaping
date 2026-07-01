@@ -28,7 +28,7 @@ import { TallyForm } from './components/TallyForm';
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
       {/* Darker Landscape Background */}
       <div className="absolute inset-0 z-0">
         <img
@@ -37,9 +37,8 @@ const Hero = () => {
           className="w-full h-full object-cover opacity-80"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-primary-dark/50 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/80 via-primary-dark/40 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-primary-dark/60 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary-dark/50 to-transparent"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,15 +76,15 @@ const Hero = () => {
               </a>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm font-medium text-gray-700">
-              <div className="flex items-center gap-2 bg-white/50 px-3 py-1.5 rounded-lg backdrop-blur-sm">
-                <CheckCircle2 className="text-primary" size={18} /> Fully Licensed
+            <div className="flex flex-wrap items-center gap-4 sm:gap-8 text-sm font-semibold text-white drop-shadow-md">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="text-primary-light" size={20} /> Fully Licensed
               </div>
-              <div className="flex items-center gap-2 bg-white/50 px-3 py-1.5 rounded-lg backdrop-blur-sm">
-                <CheckCircle2 className="text-primary" size={18} /> Insured
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="text-primary-light" size={20} /> Insured
               </div>
-              <div className="flex items-center gap-2 bg-white/50 px-3 py-1.5 rounded-lg backdrop-blur-sm">
-                <CheckCircle2 className="text-primary" size={18} /> Free Estimates
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="text-primary-light" size={20} /> Free Estimates
               </div>
             </div>
           </motion.div>
@@ -123,6 +122,10 @@ const Hero = () => {
                     <option value="other">Other / Not Sure</option>
                   </select>
                 </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Project Details</label>
+                  <textarea className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 resize-none h-24" placeholder="Tell us about your landscape..." required></textarea>
+                </div>
                 <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl transition-all mt-2 shadow-lg shadow-primary/30 hover:-translate-y-1">
                   Get My Free Estimate
                 </button>
@@ -138,34 +141,37 @@ const Hero = () => {
 
 const TrustBadges = () => {
   return (
-    <section className="py-12 bg-primary-dark border-y border-white/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+    <section className="py-12 bg-white border-y border-gray-100 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-50 rounded-full blur-[80px] opacity-40 -mr-[250px] -mt-[250px]"></div>
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary-light/10 rounded-full blur-[60px] opacity-30 -ml-[150px] -mb-[150px]"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <p className="text-center text-sm font-bold text-primary-light uppercase tracking-widest mb-8">Trusted By Homeowners & Businesses in North County</p>
+        <p className="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Trusted By Homeowners & Businesses in North County</p>
         <div className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-20 items-center">
           <div className="flex flex-col items-center gap-3 group">
-            <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-primary transition-colors">
-              <Award className="text-primary-light group-hover:text-white transition-colors" size={32} />
+            <div className="bg-green-50 p-4 rounded-2xl group-hover:bg-primary transition-colors duration-300">
+              <Award className="text-primary group-hover:text-white transition-colors duration-300" size={32} />
             </div>
-            <span className="font-bold text-white text-sm sm:text-base">Top Rated Local</span>
+            <span className="font-bold text-gray-900 text-sm sm:text-base">Top Rated Local</span>
           </div>
           <div className="flex flex-col items-center gap-3 group">
-            <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-primary transition-colors">
-              <ShieldCheck className="text-primary-light group-hover:text-white transition-colors" size={32} />
+            <div className="bg-green-50 p-4 rounded-2xl group-hover:bg-primary transition-colors duration-300">
+              <ShieldCheck className="text-primary group-hover:text-white transition-colors duration-300" size={32} />
             </div>
-            <span className="font-bold text-white text-sm sm:text-base">Licensed & Insured</span>
+            <span className="font-bold text-gray-900 text-sm sm:text-base">Licensed & Insured</span>
           </div>
           <div className="flex flex-col items-center gap-3 group">
-            <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-primary transition-colors">
-              <ThumbsUp className="text-primary-light group-hover:text-white transition-colors" size={32} />
+            <div className="bg-green-50 p-4 rounded-2xl group-hover:bg-primary transition-colors duration-300">
+              <ThumbsUp className="text-primary group-hover:text-white transition-colors duration-300" size={32} />
             </div>
-            <span className="font-bold text-white text-sm sm:text-base">100% Satisfaction</span>
+            <span className="font-bold text-gray-900 text-sm sm:text-base">100% Satisfaction</span>
           </div>
           <div className="flex flex-col items-center gap-3 group">
-            <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-primary transition-colors">
-              <Leaf className="text-primary-light group-hover:text-white transition-colors" size={32} />
+            <div className="bg-green-50 p-4 rounded-2xl group-hover:bg-primary transition-colors duration-300">
+              <Leaf className="text-primary group-hover:text-white transition-colors duration-300" size={32} />
             </div>
-            <span className="font-bold text-white text-sm sm:text-base">Eco-Friendly</span>
+            <span className="font-bold text-gray-900 text-sm sm:text-base">Eco-Friendly</span>
           </div>
         </div>
       </div>
@@ -175,8 +181,9 @@ const TrustBadges = () => {
 
 const Services = () => {
   return (
-    <section id="services" className="py-32 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-32 bg-gray-50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Our Expertise</h2>
           <h3 className="text-4xl md:text-5xl font-display font-extrabold text-gray-900 mb-6">Comprehensive Landscape Services</h3>
@@ -229,8 +236,9 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="about" className="py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-32 bg-white overflow-hidden relative">
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.015]"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden premium-shadow">
@@ -443,8 +451,9 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-32 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-32 bg-gray-50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Questions</h2>
           <h3 className="text-4xl font-display font-bold text-gray-900 mb-6">Frequently Asked Questions</h3>
