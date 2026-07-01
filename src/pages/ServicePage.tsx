@@ -67,7 +67,7 @@ export const ServicePage = () => {
               </div>
               <h1 className="text-4xl md:text-6xl font-display font-bold text-gray-900 mb-6">
                 {service.title} <br />
-                <span className="text-primary text-2xl md:text-3xl block mt-2">Expert Solutions in Chula Vista</span>
+                <span className="text-primary text-2xl md:text-3xl block mt-2">Expert Solutions in San Marcos</span>
               </h1>
               <p className="text-xl text-gray-700 mb-10 leading-relaxed">
                 {service.longDesc}
@@ -103,7 +103,7 @@ export const ServicePage = () => {
               </div>
 
               <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
-                <h3 className="text-xl font-bold mb-4">Why Choose A.G. Landscape for {service.title}?</h3>
+                <h3 className="text-xl font-bold mb-4">Why Choose MG-Landscaping for {service.title}?</h3>
                 <p className="text-gray-600 mb-6">
                   We combine local expertise with premium materials and advanced technology to deliver results that last. Our team is dedicated to your satisfaction and the long-term health of your landscape.
                 </p>
@@ -137,8 +137,8 @@ export const ServicePage = () => {
 
                 <div className="mt-8 pt-8 border-t border-gray-100 text-center">
                   <p className="text-gray-500 text-sm mb-4">Prefer to call?</p>
-                  <a href="tel:9518580669" className="text-2xl font-bold text-primary-dark hover:text-primary transition-colors flex items-center justify-center gap-2">
-                    <Phone size={24} /> 951-858-0669
+                  <a href="tel:7604023315" className="text-2xl font-bold text-primary-dark hover:text-primary transition-colors flex items-center justify-center gap-2">
+                    <Phone size={24} /> 760-402-3315
                   </a>
                 </div>
               </div>

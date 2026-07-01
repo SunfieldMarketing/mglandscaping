@@ -32,7 +32,7 @@ const Hero = () => {
       {/* Darker Landscape Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://picsum.photos/seed/landscape/1920/1080"
+          src="/img/hero_bg_1782917318254.png"
           alt="Landscaping Background"
           className="w-full h-full object-cover opacity-60"
           referrerPolicy="no-referrer"
@@ -50,7 +50,7 @@ const Hero = () => {
           >
             <div className="inline-flex items-center gap-2 bg-white border border-green-100 px-4 py-2 rounded-full text-primary-dark text-sm font-semibold mb-6 shadow-sm">
               <Leaf className="text-primary" size={16} />
-              <span>Premium Landscaping in Chula Vista, CA</span>
+              <span>Premium Landscaping in San Marcos, CA</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 leading-[1.1] mb-6 text-balance">
               Transform Your <br />
@@ -68,10 +68,10 @@ const Hero = () => {
                 Get a Free Quote <ArrowRight size={20} />
               </a>
               <a
-                href="tel:9518580669"
+                href="tel:7604023315"
                 className="bg-white border-2 border-gray-200 hover:border-primary text-gray-800 px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all"
               >
-                <Phone size={20} className="text-primary" /> 951-858-0669
+                <Phone size={20} className="text-primary" /> 760-402-3315
               </a>
             </div>
 
@@ -198,7 +198,7 @@ const WhyChooseUs = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
-              <img src="https://i.ibb.co/rGdnKR1X/image.png" alt="Professional Landscaper" className="w-full h-auto" referrerPolicy="no-referrer" />
+              <img src="/img/about_landscaper_1782917381903.png" alt="Professional Landscaper" className="w-full h-auto" referrerPolicy="no-referrer" />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-primary text-white p-8 rounded-3xl shadow-xl z-20 hidden md:block">
               <p className="text-4xl font-bold mb-1">15+</p>
@@ -211,7 +211,7 @@ const WhyChooseUs = () => {
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Why Choose Us</h2>
             <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-8">Simple, Stress-Free Landscaping Process</h3>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Getting professional landscaping shouldn't be complicated. When you work with A.G. Landscape, we make the process easy from the first call to final cleanup.
+              Getting professional landscaping shouldn't be complicated. When you work with MG-Landscaping, we make the process easy from the first call to final cleanup.
             </p>
 
             <div className="space-y-8 mb-10">
@@ -256,19 +256,19 @@ const WhyChooseUs = () => {
 const SocialProof = () => {
   const reviews = [
     {
-      name: "Kim G.",
-      text: "Alex and his team were incredibly professional start to finish. They did a great job removing our tree. Would highly recommend this company!",
-      role: "Homeowner in Chula Vista"
+      name: "Kathleen K.",
+      text: "Very friendly, expertise in tree removal and tree trimming, and gardening upkeep. Highly recommended!",
+      role: "Homeowner in San Marcos"
     },
     {
-      name: "Jamie S.",
-      text: "They are by far the most friendly, professional, prompt with communications, and just overall wonderful to work with.",
-      role: "Property Manager"
+      name: "Richard A.",
+      text: "I needed to get vegetation out of the alley and off the power line quickly. Marcelino and his team were prompt and professional.",
+      role: "Homeowner in Escondido"
     },
     {
-      name: "Neal A.",
-      text: "The guys did a great job, clearly knew what they were doing and worked hard on a very hot day. I highly recommend this business!",
-      role: "Homeowner in Bonita"
+      name: "Fred D.",
+      text: "We were looking for a regular gardener and MG landscape has been fantastic. They are reliable and do wonderful work.",
+      role: "Homeowner in Cardiff"
     }
   ];
 
@@ -322,12 +322,11 @@ const SocialProof = () => {
 
 const ServiceArea = () => {
   const cities = [
-    { name: "Chula Vista", zips: "91910, 91911, 91913, 91914, 91915" },
-    { name: "Bonita", zips: "91902" },
-    { name: "National City", zips: "91950" },
-    { name: "San Diego", zips: "92154, 92173" },
-    { name: "Imperial Beach", zips: "91932" },
-    { name: "Eastlake", zips: "91914, 91915" }
+    { name: "San Marcos", zips: "92069, 92078, 92096" },
+    { name: "La Costa", zips: "92009" },
+    { name: "Escondido", zips: "92025, 92026, 92027, 92029" },
+    { name: "Cardiff", zips: "92007" },
+    { name: "Carlsbad", zips: "92008, 92010, 92011" }
   ];
 
   return (
@@ -336,9 +335,9 @@ const ServiceArea = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Service Area</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-8">Serving Chula Vista & Surrounding Areas</h3>
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-8">Serving San Marcos & Surrounding Areas</h3>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              We provide professional landscaping services throughout the South Bay region. If you're in our service area, we can typically provide an estimate within 24-48 hours.
+              We provide professional landscaping services throughout the North County region. If you're in our service area, we can typically provide an estimate within 24-48 hours.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -355,20 +354,20 @@ const ServiceArea = () => {
 
             <div className="inline-flex items-center gap-3 bg-green-50 text-primary-dark px-6 py-4 rounded-xl font-semibold w-full sm:w-auto">
               <CheckCircle2 className="text-primary" size={24} />
-              We serve all of South San Diego County
+              We serve San Marcos and surrounding areas
             </div>
           </div>
 
           <div className="relative h-[400px] md:h-[500px] bg-gray-100 rounded-3xl overflow-hidden shadow-lg border border-gray-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107449.19951859664!2d-117.08643885!3d32.6277134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94e45c1109961%3A0x6436b13997204c3!2sChula%20Vista%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107449.19951859664!2d-117.2023199!3d33.1433723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc743c3a9f0e1d%3A0xc6c78e1b12b504a5!2sSan%20Marcos%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="A.G Landscape Service Area Map"
+              title="MG Landscaping Service Area Map"
               className="absolute inset-0 transition-all duration-700"
             ></iframe>
           </div>
@@ -383,8 +382,8 @@ const FAQ = () => {
 
   const faqs = [
     {
-      q: "What landscaping services does A.G. Landscape offer?",
-      a: "A.G. Landscape offers full-service landscaping in Chula Vista, CA including lawn maintenance, irrigation systems, sprinkler repair, landscape design, tree services, hardscaping, and complete property clean-ups for residential and commercial properties."
+      q: "What landscaping services does MG-Landscaping offer?",
+      a: "MG-Landscaping offers full-service landscaping in San Marcos, CA including clean-ups, mowing, tree trimming, sod installation, tree removal, and gardening upkeep."
     },
     {
       q: "Are you licensed and insured?",
@@ -400,7 +399,7 @@ const FAQ = () => {
     },
     {
       q: "Do you offer ongoing lawn and garden maintenance?",
-      a: "We offer flexible maintenance plans—weekly, bi-weekly, or monthly—tailored to your garden's specific needs and your budget."
+      a: "We offer flexible maintenance plans—weekly, bi-weekly, or monthly—tailored to your garden's specific needs and your budget in San Marcos."
     }
   ];
 
@@ -476,7 +475,7 @@ const HomePage = () => {
             <div className="relative z-10">
               <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white mb-6 sm:mb-8">Ready to Transform Your Landscape?</h2>
               <p className="text-lg sm:text-xl text-green-100 mb-10 sm:mb-12 max-w-2xl mx-auto">
-                Join hundreds of satisfied homeowners in Chula Vista. Get your free, no-obligation estimate today.
+                Join hundreds of satisfied homeowners in San Marcos. Get your free, no-obligation estimate today.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-12">
                 <a
@@ -486,10 +485,10 @@ const HomePage = () => {
                   Get Started Now
                 </a>
                 <a
-                  href="tel:9518580669"
+                  href="tel:7604023315"
                   className="bg-transparent border-2 border-white/30 hover:border-white text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl transition-all"
                 >
-                  Call 951-858-0669
+                  Call 760-402-3315
                 </a>
               </div>
 
