@@ -86,13 +86,13 @@ export const Navbar = () => {
 
             {isHome ? (
               <>
-                <a href="#about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">About</a>
-                <a href="#service-area" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Service Area</a>
+                <Link to="/about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">About</Link>
+                <Link to="/contact" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Contact</Link>
               </>
             ) : (
               <>
-                <Link to="/#about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">About</Link>
-                <Link to="/#service-area" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Service Area</Link>
+                <Link to="/about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">About</Link>
+                <Link to="/contact" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Contact</Link>
               </>
             )}
             <a 
@@ -161,13 +161,13 @@ export const Navbar = () => {
 
               {isHome ? (
                 <>
-                  <a href="#about" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">About</a>
-                  <a href="#service-area" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">Service Area</a>
+                  <Link to="/about" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">About</Link>
+                  <Link to="/contact" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">Contact</Link>
                 </>
               ) : (
                 <>
-                  <Link to="/#about" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">About</Link>
-                  <Link to="/#service-area" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">Service Area</Link>
+                  <Link to="/about" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">About</Link>
+                  <Link to="/contact" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">Contact</Link>
                 </>
               )}
               <div className="pt-4 px-2">
@@ -213,8 +213,8 @@ export const Footer = () => {
             <h4 className="text-lg font-bold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-4 text-gray-400">
               <li><Link to="/#services" className="hover:text-white transition-colors">Our Services</Link></li>
-              <li><Link to="/#about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/#service-area" className="hover:text-white transition-colors">Service Area</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact & Service Area</Link></li>
               <li><Link to="/#faq" className="hover:text-white transition-colors">FAQ</Link></li>
             </ul>
           </div>

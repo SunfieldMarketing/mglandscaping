@@ -37,8 +37,9 @@ const Hero = () => {
           className="w-full h-full object-cover opacity-80"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white/95"></div>
+        <div className="absolute inset-0 bg-primary-dark/50 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/80 via-primary-dark/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,16 +50,16 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
-            <div className="inline-flex items-center gap-2 bg-white border border-green-100 px-4 py-2 rounded-full text-primary-dark text-sm font-semibold mb-6 shadow-sm">
-              <Leaf className="text-primary" size={16} />
+            <div className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-md px-4 py-2 rounded-full text-white font-bold text-sm mb-6 border border-primary/30">
+              <Leaf className="text-primary-light" size={16} />
               <span>Premium Landscaping in San Marcos, CA</span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-gray-900 leading-[1.1] mb-6 text-balance tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white leading-[1.1] mb-6 text-balance tracking-tight">
               Transform Your <br />
-              <span className="text-gradient">Outdoor Space</span>
+              <span className="text-primary-light">Outdoor Space</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-xl leading-relaxed font-medium">
-              Professional landscaping, lawn care, and smart irrigation systems. We bring your vision to life with dependable quality and expert craftsmanship.
+            <p className="text-lg md:text-xl text-green-50 mb-8 max-w-xl leading-relaxed font-medium">
+              Professional landscaping, lawn care, and smart irrigation systems. We bring your vision to life with dependable quality and expert craftsmanship. Experience the difference of a truly premium landscape.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -143,10 +144,10 @@ const Services = () => {
     <section id="services" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Our Expertise</h2>
-          <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">Professional Landscaping Services</h3>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            We offer a wide range of landscaping services, from innovative design to efficient maintenance, ensuring your outdoor space flourishes.
+          <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Our Expertise</h2>
+          <h3 className="text-4xl md:text-5xl font-display font-extrabold text-gray-900 mb-6">Comprehensive Landscape Services</h3>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            From routine maintenance to complete outdoor transformations, our experienced team delivers premium results tailored to your property.
           </p>
         </div>
 
@@ -199,7 +200,7 @@ const WhyChooseUs = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden premium-shadow">
-              <img src="/img/premium_about_us_1782920098625.png" alt="Professional Landscaper" className="w-full h-auto transform transition-transform duration-700 hover:scale-105" referrerPolicy="no-referrer" />
+              <img src="/img/team_working_faceless_1782922187655.png" alt="Landscaping Team Working" className="w-full h-auto transform transition-transform duration-700 hover:scale-105" referrerPolicy="no-referrer" />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-primary-dark text-white p-8 rounded-3xl premium-shadow z-20 hidden md:block border border-white/10">
               <p className="text-5xl font-display font-extrabold mb-1 text-primary-light">15+</p>
@@ -337,8 +338,11 @@ const ServiceArea = () => {
           <div>
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Service Area</h2>
             <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-8">Serving San Marcos & Surrounding Areas</h3>
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              We provide professional landscaping services throughout the North County region. If you're in our service area, we can typically provide an estimate within 24-48 hours.
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              MG-Landscaping is a premier landscaping maintenance and construction company proudly serving San Marcos, La Costa, Escondido, Cardiff, and Carlsbad. We specialize in transforming outdoor spaces with unmatched expertise and care.
+            </p>
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              Whether you need a complete garden overhaul, reliable routine maintenance, or specialized tree care, our dedicated team brings passion and precision to every project. We don't just maintain yards; we cultivate outdoor experiences.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -504,11 +508,16 @@ const HomePage = () => {
   );
 };
 
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
+
 export default function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/services/:slug" element={<ServicePage />} />
       </Routes>
     </Router>

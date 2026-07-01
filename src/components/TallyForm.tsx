@@ -34,12 +34,12 @@ export const TallyForm = () => {
     }, []);
 
     return (
-        <div className="tally-form-container" style={{ minHeight: '762px', width: '100%' }}>
+        <div className="tally-form-container" style={{ minHeight: '500px', width: '100%' }}>
             <iframe
                 data-tally-src="https://tally.so/embed/gD5BpJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                 loading="lazy"
                 width="100%"
-                height="762"
+                height="500"
                 frameBorder="0"
                 marginHeight={0}
                 marginWidth={0}

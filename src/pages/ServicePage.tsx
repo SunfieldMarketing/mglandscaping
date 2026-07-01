@@ -136,7 +136,7 @@ export const ServicePage = () => {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-100 text-center">
+                <div className="mt-8 pt-8 border-t border-gray-100/50 text-center">
                   <p className="text-gray-500 text-sm mb-4">Prefer to call?</p>
                   <a href="tel:7604023315" className="text-2xl font-bold text-primary-dark hover:text-primary transition-colors flex items-center justify-center gap-2">
                     <Phone size={24} /> 760-402-3315
@@ -144,6 +144,49 @@ export const ServicePage = () => {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Process Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">How It Works</h2>
+            <h3 className="text-4xl font-display font-extrabold text-gray-900">Our {service.title} Process</h3>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="glass-card p-8 rounded-3xl premium-shadow border border-white text-center">
+              <div className="w-16 h-16 bg-primary-dark text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+              <h4 className="text-xl font-bold mb-3">Consultation</h4>
+              <p className="text-gray-600">We discuss your needs, evaluate your property, and provide a transparent estimate.</p>
+            </div>
+            <div className="glass-card p-8 rounded-3xl premium-shadow border border-white text-center">
+              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+              <h4 className="text-xl font-bold mb-3">Execution</h4>
+              <p className="text-gray-600">Our professional team arrives on time and completes the work with precision and care.</p>
+            </div>
+            <div className="glass-card p-8 rounded-3xl premium-shadow border border-white text-center">
+              <div className="w-16 h-16 bg-primary-light text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+              <h4 className="text-xl font-bold mb-3">Final Review</h4>
+              <p className="text-gray-600">We ensure you are 100% satisfied with the results and leave your property pristine.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-5xl font-display font-extrabold text-gray-900 mb-6">Ready to get started?</h2>
+          <p className="text-xl text-gray-600 mb-10">Contact us today to schedule your {service.title.toLowerCase()} service.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link to="/contact" className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl shadow-primary/30 hover:-translate-y-1">
+              Request a Free Quote
+            </Link>
+            <a href="tel:7604023315" className="glass-morphism hover:bg-white text-gray-800 px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:-translate-y-1">
+              Call 760-402-3315
+            </a>
           </div>
         </div>
       </section>
