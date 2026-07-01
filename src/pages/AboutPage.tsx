@@ -136,35 +136,19 @@ export const AboutPage = () => {
             <h3 className="text-4xl font-display font-extrabold text-gray-900">What Drives Us</h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-            {/* Visual Bento */}
-            <div className="md:col-span-8 bento-card p-0 h-[350px] group">
-              <img src="/img/modern_patio_bento_1782923885506.png" alt="Modern Patio" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
-                <h4 className="text-3xl font-bold text-white mb-2">Dedicated to Perfection</h4>
-                <p className="text-gray-200 text-lg">Our values define everything we build and maintain.</p>
-              </div>
-            </div>
-
-            {/* Core Value 1 */}
-            <div className="md:col-span-4 bento-card bg-grid-pattern">
-              <div className="bg-green-50 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
-                {values[0].icon}
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">{values[0].title}</h4>
-              <p className="text-gray-600">{values[0].desc}</p>
-            </div>
-
-            {/* Core Values 2, 3, 4 */}
-            {values.slice(1).map((val, idx) => (
-              <div key={idx} className="md:col-span-4 bento-card bg-white relative">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
-                <div className="bg-green-50 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 relative z-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((val, idx) => (
+              <motion.div 
+                key={idx}
+                whileHover={{ y: -8 }}
+                className="glass-card p-8 rounded-3xl premium-shadow border border-white"
+              >
+                <div className="bg-green-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                   {val.icon}
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2 relative z-10">{val.title}</h4>
-                <p className="text-gray-600 relative z-10">{val.desc}</p>
-              </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">{val.title}</h4>
+                <p className="text-gray-600">{val.desc}</p>
+              </motion.div>
             ))}
           </div>
         </div>
