@@ -42,7 +42,7 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Home</Link>
             
-            <div className="relative" onMouseLeave={() => setServicesOpen(false)}>
+            <div className="relative" onMouseLeave={() => setServicesOpen(false)} onMouseEnter={() => setServicesOpen(true)}>
               <div className="flex items-center">
                 {isHome ? (
                   <a href="#services" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors pr-1">Services</a>
@@ -65,9 +65,10 @@ export const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
+                    className="absolute top-full left-0 pt-4"
                   >
-                    <div className="py-2">
+                    <div className="w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
+                      <div className="py-2">
                       {servicesData.map(service => (
                         <Link 
                           key={service.id} 
@@ -78,6 +79,7 @@ export const Navbar = () => {
                           {service.title}
                         </Link>
                       ))}
+                      </div>
                     </div>
                   </motion.div>
                 )}

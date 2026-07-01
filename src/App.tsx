@@ -142,7 +142,7 @@ const Hero = () => {
 const TrustBadges = () => {
   return (
     <section className="py-12 bg-white border-y border-gray-100 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
+      <div className="absolute inset-0 bg-diagonal-lines opacity-[0.03]"></div>
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-50 rounded-full blur-[80px] opacity-40 -mr-[250px] -mt-[250px]"></div>
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary-light/10 rounded-full blur-[60px] opacity-30 -ml-[150px] -mb-[150px]"></div>
       
@@ -182,7 +182,7 @@ const TrustBadges = () => {
 const Services = () => {
   return (
     <section id="services" className="py-32 bg-gray-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.15]"></div>
+      <div className="absolute inset-0 bg-diagonal-lines opacity-[0.15]"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Our Expertise</h2>
@@ -236,56 +236,56 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="about" className="py-32 bg-white overflow-hidden relative">
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.15]"></div>
+    <section id="about" className="py-32 bg-primary-dark text-white overflow-hidden relative">
+      <div className="absolute inset-0 bg-circuit-board opacity-20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden premium-shadow">
               <img src="/img/team_working_faceless_1782922187655.png" alt="Landscaping Team Working" className="w-full h-auto transform transition-transform duration-700 hover:scale-105" referrerPolicy="no-referrer" />
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-primary-dark text-white p-8 rounded-3xl premium-shadow z-20 hidden md:block border border-white/10">
-              <p className="text-5xl font-display font-extrabold mb-1 text-primary-light">15+</p>
-              <p className="text-sm font-semibold tracking-wider uppercase opacity-90">Years Experience</p>
+            <div className="absolute -bottom-8 -right-8 bg-white text-primary-dark p-8 rounded-3xl premium-shadow z-20 hidden md:block border border-gray-100">
+              <p className="text-5xl font-display font-extrabold mb-1 text-primary">15+</p>
+              <p className="text-sm font-bold tracking-wider uppercase opacity-90">Years Experience</p>
             </div>
-            <div className="absolute -top-8 -left-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -top-8 -left-8 w-64 h-64 bg-primary-light/20 rounded-full blur-3xl -z-10"></div>
           </div>
 
           <div>
-            <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Why Choose Us</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-8">Simple, Stress-Free Landscaping Process</h3>
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+            <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Why Choose Us</h2>
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-8">Simple, Stress-Free Landscaping Process</h3>
+            <p className="text-green-50/80 text-lg mb-8 leading-relaxed">
               Getting professional landscaping shouldn't be complicated. When you work with MG-Landscaping, we make the process easy from the first call to final cleanup.
             </p>
 
             <div className="space-y-8 mb-10">
               <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-primary font-bold text-xl">1</div>
+                <div className="flex-shrink-0 w-12 h-12 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-primary-light font-bold text-xl border border-white/20">1</div>
                 <div>
-                  <h4 className="font-bold text-gray-900 text-lg mb-1">Quick Consultation</h4>
-                  <p className="text-gray-600">We start with a quick call or visit to understand your vision and needs.</p>
+                  <h4 className="font-bold text-white text-lg mb-1">Quick Consultation</h4>
+                  <p className="text-green-50/70">We start with a quick call or visit to understand your vision and needs.</p>
                 </div>
               </div>
               <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-primary font-bold text-xl">2</div>
+                <div className="flex-shrink-0 w-12 h-12 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-primary-light font-bold text-xl border border-white/20">2</div>
                 <div>
-                  <h4 className="font-bold text-gray-900 text-lg mb-1">Clear Estimate</h4>
-                  <p className="text-gray-600">You'll receive a transparent, no-obligation quote with no hidden fees.</p>
+                  <h4 className="font-bold text-white text-lg mb-1">Clear Estimate</h4>
+                  <p className="text-green-50/70">You'll receive a transparent, no-obligation quote with no hidden fees.</p>
                 </div>
               </div>
               <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-primary font-bold text-xl">3</div>
+                <div className="flex-shrink-0 w-12 h-12 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-primary-light font-bold text-xl border border-white/20">3</div>
                 <div>
-                  <h4 className="font-bold text-gray-900 text-lg mb-1">Efficient Execution</h4>
-                  <p className="text-gray-600">Our team shows up on time and handles the job with precision and care.</p>
+                  <h4 className="font-bold text-white text-lg mb-1">Efficient Execution</h4>
+                  <p className="text-green-50/70">Our team shows up on time and handles the job with precision and care.</p>
                 </div>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 pt-6 border-t border-gray-100">
+            <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
               {features.map((f, i) => (
-                <div key={i} className="flex items-center gap-3 text-gray-800 font-semibold">
-                  {f.icon}
+                <div key={i} className="flex items-center gap-3 text-green-50 font-semibold">
+                  <div className="text-primary-light">{f.icon}</div>
                   <span>{f.title}</span>
                 </div>
               ))}
@@ -452,7 +452,7 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="py-32 bg-gray-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.15]"></div>
+      <div className="absolute inset-0 bg-diagonal-lines opacity-[0.15]"></div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Questions</h2>
