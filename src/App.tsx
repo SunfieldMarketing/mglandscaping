@@ -32,12 +32,13 @@ const Hero = () => {
       {/* Darker Landscape Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://picsum.photos/seed/landscape/1920/1080"
+          src="/img/premium_hero_bg_1782920090756.png"
           alt="Landscaping Background"
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-80"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white/95"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,9 +53,9 @@ const Hero = () => {
               <Leaf className="text-primary" size={16} />
               <span>Premium Landscaping in San Marcos, CA</span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 leading-[1.1] mb-6 text-balance">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-gray-900 leading-[1.1] mb-6 text-balance tracking-tight">
               Transform Your <br />
-              <span className="text-primary">Outdoor Space</span>
+              <span className="text-gradient">Outdoor Space</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-xl leading-relaxed font-medium">
               Professional landscaping, lawn care, and smart irrigation systems. We bring your vision to life with dependable quality and expert craftsmanship.
@@ -63,13 +64,13 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a
                 href="#quote"
-                className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary/20"
+                className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all shadow-xl shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-1"
               >
                 Get a Free Quote <ArrowRight size={20} />
               </a>
               <a
                 href="tel:7604023315"
-                className="bg-white border-2 border-gray-200 hover:border-primary text-gray-800 px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all"
+                className="glass-morphism hover:bg-white text-gray-800 px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all shadow-lg hover:-translate-y-1"
               >
                 <Phone size={20} className="text-primary" /> 760-402-3315
               </a>
@@ -155,11 +156,11 @@ const Services = () => {
             return (
               <motion.div
                 key={idx}
-                whileHover={{ y: -8 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col"
+                whileHover={{ y: -12 }}
+                className="glass-card rounded-[2rem] overflow-hidden premium-shadow transition-all group flex flex-col border border-white/40"
               >
-                <div className="h-56 overflow-hidden relative flex-shrink-0">
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
+                <div className="h-56 overflow-hidden relative flex-shrink-0 rounded-t-[2rem]">
+                  <div className="absolute inset-0 bg-primary-dark/20 mix-blend-overlay group-hover:bg-transparent transition-colors z-10 duration-500"></div>
                   <img src={service.img} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
                 </div>
                 <div className="p-6 sm:p-8 relative flex flex-col flex-grow">
@@ -197,14 +198,14 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
-              <img src="https://i.ibb.co/rGdnKR1X/image.png" alt="Professional Landscaper" className="w-full h-auto" referrerPolicy="no-referrer" />
+            <div className="relative z-10 rounded-[2.5rem] overflow-hidden premium-shadow">
+              <img src="/img/premium_about_us_1782920098625.png" alt="Professional Landscaper" className="w-full h-auto transform transition-transform duration-700 hover:scale-105" referrerPolicy="no-referrer" />
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-primary text-white p-8 rounded-3xl shadow-xl z-20 hidden md:block">
-              <p className="text-4xl font-bold mb-1">15+</p>
-              <p className="text-sm font-medium opacity-90">Years of Experience</p>
+            <div className="absolute -bottom-8 -right-8 bg-primary-dark text-white p-8 rounded-3xl premium-shadow z-20 hidden md:block border border-white/10">
+              <p className="text-5xl font-display font-extrabold mb-1 text-primary-light">15+</p>
+              <p className="text-sm font-semibold tracking-wider uppercase opacity-90">Years Experience</p>
             </div>
-            <div className="absolute -top-8 -left-8 w-64 h-64 bg-green-50 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -top-8 -left-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10"></div>
           </div>
 
           <div>
@@ -279,8 +280,8 @@ const SocialProof = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-green-300 font-bold tracking-widest uppercase text-sm mb-4">Social Proof</h2>
-          <h3 className="text-4xl md:text-5xl font-display font-bold mb-6">Loved by Our Community</h3>
+          <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Social Proof</h2>
+          <h3 className="text-4xl md:text-5xl font-display font-extrabold mb-6">Loved by Our Community</h3>
           <div className="flex justify-center items-center gap-2 text-xl font-medium">
             <span className="text-yellow-400 flex">
               {[...Array(5)].map((_, i) => <Star key={i} size={24} fill="currentColor" />)}

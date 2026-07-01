@@ -65,9 +65,9 @@ export const ServicePage = () => {
               <div className="bg-green-50 w-20 h-20 rounded-3xl flex items-center justify-center mb-8 shadow-sm border border-green-100">
                 <Icon className="text-primary" size={40} />
               </div>
-              <h1 className="text-4xl md:text-6xl font-display font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-6xl font-display font-extrabold text-gray-900 mb-6 tracking-tight">
                 {service.title} <br />
-                <span className="text-primary text-2xl md:text-3xl block mt-2">Expert Solutions in San Marcos</span>
+                <span className="text-gradient text-2xl md:text-3xl block mt-2">Expert Solutions in San Marcos</span>
               </h1>
               <p className="text-xl text-gray-700 mb-10 leading-relaxed">
                 {service.longDesc}
@@ -102,8 +102,9 @@ export const ServicePage = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
-                <h3 className="text-xl font-bold mb-4">Why Choose MG-Landscaping for {service.title}?</h3>
+              <div className="glass-card p-8 rounded-[2rem] border border-gray-100/50 premium-shadow relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-light/10 rounded-full blur-2xl -mr-16 -mt-16"></div>
+                <h3 className="text-xl font-extrabold mb-4 relative z-10 text-primary-dark">Why Choose MG-Landscaping for {service.title}?</h3>
                 <p className="text-gray-600 mb-6">
                   We combine local expertise with premium materials and advanced technology to deliver results that last. Our team is dedicated to your satisfaction and the long-term health of your landscape.
                 </p>
