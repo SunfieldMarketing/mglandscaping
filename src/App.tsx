@@ -90,23 +90,44 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Lead Capture Form - GoHighLevel Integration */}
+          {/* Native Quick Quote Form */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            id="quote"
             className="lg:col-span-5"
           >
-            <div className="estimate-card">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Request an Estimate</h3>
-              <p className="text-gray-500 mb-6 text-sm">Fill out the form below and our team will contact you shortly.</p>
+            <div className="bg-white p-8 rounded-[2rem] premium-shadow border border-gray-100 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-green-50 rounded-full blur-3xl -mr-16 -mt-16"></div>
+              
+              <h3 className="text-2xl font-display font-extrabold text-gray-900 mb-2 relative z-10">Quick Quote</h3>
+              <p className="text-gray-500 mb-6 text-sm relative z-10">Get a fast, no-obligation estimate for your project.</p>
 
-              <div className="ghl-form-wrap">
-                <div className="ghl-iframe-container">
-                  <TallyForm />
+              <form className="space-y-4 relative z-10" onSubmit={(e) => { e.preventDefault(); window.location.href = '#quote'; }}>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+                  <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50" placeholder="John Doe" required />
                 </div>
-              </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
+                  <input type="tel" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50" placeholder="(760) 555-0123" required />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Service Needed</label>
+                  <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 text-gray-700" required>
+                    <option value="">Select a service...</option>
+                    <option value="maintenance">Lawn Maintenance</option>
+                    <option value="cleanup">Yard Cleanup</option>
+                    <option value="tree">Tree Service</option>
+                    <option value="sod">Sod Installation</option>
+                    <option value="other">Other / Not Sure</option>
+                  </select>
+                </div>
+                <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl transition-all mt-2 shadow-lg shadow-primary/30 hover:-translate-y-1">
+                  Get My Free Estimate
+                </button>
+                <p className="text-xs text-center text-gray-400 mt-4">We respect your privacy. No spam.</p>
+              </form>
             </div>
           </motion.div>
         </div>
@@ -117,21 +138,34 @@ const Hero = () => {
 
 const TrustBadges = () => {
   return (
-    <section className="py-10 border-y border-gray-100 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">Trusted By Homeowners & Businesses</p>
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-16 items-center opacity-80 md:grayscale hover:grayscale-0 transition-all duration-500">
-          <div className="flex items-center gap-2 font-bold text-lg sm:text-xl text-gray-800">
-            <Award className="text-primary" size={28} /> Top Rated Local
+    <section className="py-12 bg-primary-dark border-y border-white/10 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <p className="text-center text-sm font-bold text-primary-light uppercase tracking-widest mb-8">Trusted By Homeowners & Businesses in North County</p>
+        <div className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-20 items-center">
+          <div className="flex flex-col items-center gap-3 group">
+            <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-primary transition-colors">
+              <Award className="text-primary-light group-hover:text-white transition-colors" size={32} />
+            </div>
+            <span className="font-bold text-white text-sm sm:text-base">Top Rated Local</span>
           </div>
-          <div className="flex items-center gap-2 font-bold text-lg sm:text-xl text-gray-800">
-            <ShieldCheck className="text-primary" size={28} /> Licensed & Insured
+          <div className="flex flex-col items-center gap-3 group">
+            <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-primary transition-colors">
+              <ShieldCheck className="text-primary-light group-hover:text-white transition-colors" size={32} />
+            </div>
+            <span className="font-bold text-white text-sm sm:text-base">Licensed & Insured</span>
           </div>
-          <div className="flex items-center gap-2 font-bold text-lg sm:text-xl text-gray-800">
-            <ThumbsUp className="text-primary" size={28} /> 100% Satisfaction
+          <div className="flex flex-col items-center gap-3 group">
+            <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-primary transition-colors">
+              <ThumbsUp className="text-primary-light group-hover:text-white transition-colors" size={32} />
+            </div>
+            <span className="font-bold text-white text-sm sm:text-base">100% Satisfaction</span>
           </div>
-          <div className="flex items-center gap-2 font-bold text-lg sm:text-xl text-gray-800">
-            <Leaf className="text-primary" size={28} /> Eco-Friendly
+          <div className="flex flex-col items-center gap-3 group">
+            <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-primary transition-colors">
+              <Leaf className="text-primary-light group-hover:text-white transition-colors" size={32} />
+            </div>
+            <span className="font-bold text-white text-sm sm:text-base">Eco-Friendly</span>
           </div>
         </div>
       </div>
@@ -141,7 +175,7 @@ const TrustBadges = () => {
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-gray-50">
+    <section id="services" className="py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Our Expertise</h2>
@@ -195,7 +229,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-white overflow-hidden">
+    <section id="about" className="py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
@@ -275,7 +309,7 @@ const SocialProof = () => {
   ];
 
   return (
-    <section className="py-24 bg-primary-dark text-white overflow-hidden relative">
+    <section className="py-32 bg-primary-dark text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary rounded-full blur-[100px] opacity-50 -mr-[400px] -mt-[400px]"></div>
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary rounded-full blur-[80px] opacity-30 -ml-[300px] -mb-[300px]"></div>
 
@@ -332,7 +366,7 @@ const ServiceArea = () => {
   ];
 
   return (
-    <section id="service-area" className="py-24 bg-white">
+    <section id="service-area" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -409,7 +443,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-gray-50">
+    <section id="faq" className="py-32 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Questions</h2>
@@ -471,7 +505,7 @@ const HomePage = () => {
       <FAQ />
 
       {/* Final CTA Section */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-primary-dark p-8 sm:p-12 md:p-20 rounded-[2rem] sm:rounded-[3rem] shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-3xl opacity-50 -mr-32 -mt-32"></div>

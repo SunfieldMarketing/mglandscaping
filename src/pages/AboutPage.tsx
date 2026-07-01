@@ -58,7 +58,7 @@ export const AboutPage = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-white">
+      <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -96,7 +96,7 @@ export const AboutPage = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-gray-50 border-t border-gray-100">
+      <section className="py-32 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Core Values</h2>
