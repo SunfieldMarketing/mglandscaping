@@ -228,68 +228,55 @@ const Services = () => {
 };
 
 const WhyChooseUs = () => {
-  const features = [
-    { title: "Licensed & Insured", icon: <ShieldCheck className="text-primary" /> },
-    { title: "Free Estimates", icon: <CheckCircle2 className="text-primary" /> },
-    { title: "On-Time Service", icon: <Clock className="text-primary" /> },
-    { title: "Eco-Friendly Solutions", icon: <Leaf className="text-primary" /> }
-  ];
-
   return (
-    <section id="about" className="py-32 bg-white overflow-hidden relative">
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.015]"></div>
+    <section id="about" className="py-32 bg-gray-50 overflow-hidden relative">
+      <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative">
-            <div className="relative z-10 rounded-[2.5rem] overflow-hidden premium-shadow">
-              <img src="/img/team_working_faceless_1782922187655.png" alt="Landscaping Team Working" className="w-full h-auto transform transition-transform duration-700 hover:scale-105" referrerPolicy="no-referrer" />
+        <div className="text-center mb-16">
+          <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Why Choose Us</h2>
+          <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-900">Premium Quality, Zero Stress</h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Main Hero Bento */}
+          <div className="md:col-span-2 bento-card p-0 h-[400px] group">
+            <img src="/img/team_working_faceless_1782922187655.png" alt="Team Working" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8 md:p-12">
+              <h4 className="text-3xl md:text-4xl font-bold text-white mb-3">Expert Execution</h4>
+              <p className="text-gray-200 text-lg max-w-lg">Our thoroughly vetted, professional team handles every project with absolute precision and respect for your property.</p>
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-primary-dark text-white p-8 rounded-3xl premium-shadow z-20 hidden md:block border border-white/10">
-              <p className="text-5xl font-display font-extrabold mb-1 text-primary-light">15+</p>
-              <p className="text-sm font-semibold tracking-wider uppercase opacity-90">Years Experience</p>
-            </div>
-            <div className="absolute -top-8 -left-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+          </div>
+          
+          {/* Stats Bento */}
+          <div className="bento-card-dark flex flex-col justify-center items-center text-center bg-dot-pattern-light relative">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-primary rounded-full blur-[50px] opacity-40 -mr-20 -mt-20"></div>
+            <p className="text-7xl font-display font-extrabold text-primary-light mb-4">15+</p>
+            <p className="text-lg font-bold tracking-wider uppercase">Years Experience</p>
+            <p className="text-green-50 mt-4 opacity-90">Serving homeowners & businesses across North County.</p>
           </div>
 
-          <div>
-            <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Why Choose Us</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-8">Simple, Stress-Free Landscaping Process</h3>
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Getting professional landscaping shouldn't be complicated. When you work with MG-Landscaping, we make the process easy from the first call to final cleanup.
-            </p>
-
-            <div className="space-y-8 mb-10">
-              <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-primary font-bold text-xl">1</div>
-                <div>
-                  <h4 className="font-bold text-gray-900 text-lg mb-1">Quick Consultation</h4>
-                  <p className="text-gray-600">We start with a quick call or visit to understand your vision and needs.</p>
-                </div>
-              </div>
-              <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-primary font-bold text-xl">2</div>
-                <div>
-                  <h4 className="font-bold text-gray-900 text-lg mb-1">Clear Estimate</h4>
-                  <p className="text-gray-600">You'll receive a transparent, no-obligation quote with no hidden fees.</p>
-                </div>
-              </div>
-              <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-primary font-bold text-xl">3</div>
-                <div>
-                  <h4 className="font-bold text-gray-900 text-lg mb-1">Efficient Execution</h4>
-                  <p className="text-gray-600">Our team shows up on time and handles the job with precision and care.</p>
-                </div>
-              </div>
+          {/* Process 1 */}
+          <div className="bento-card bg-white relative">
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
+            <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center text-primary font-bold text-2xl mb-6 relative z-10">1</div>
+            <h4 className="font-bold text-gray-900 text-xl mb-3 relative z-10">Transparent Quotes</h4>
+            <p className="text-gray-600 relative z-10">No hidden fees, no surprises. Just honest, upfront pricing for your project.</p>
+          </div>
+          
+          {/* Visual Bento */}
+          <div className="bento-card p-0 h-64 group relative">
+            <img src="/img/macro_grass_texture_1782923862366.png" alt="Perfect Grass" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+              <h4 className="text-xl font-bold text-white">100% Satisfaction</h4>
             </div>
+          </div>
 
-            <div className="grid grid-cols-2 gap-4 pt-6 border-t border-gray-100">
-              {features.map((f, i) => (
-                <div key={i} className="flex items-center gap-3 text-gray-800 font-semibold">
-                  {f.icon}
-                  <span>{f.title}</span>
-                </div>
-              ))}
-            </div>
+          {/* Process 2 */}
+          <div className="bento-card bg-white relative">
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
+            <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center text-primary font-bold text-2xl mb-6 relative z-10">2</div>
+            <h4 className="font-bold text-gray-900 text-xl mb-3 relative z-10">On-Time Delivery</h4>
+            <p className="text-gray-600 relative z-10">We respect your time. Our crews show up when scheduled and finish promptly.</p>
           </div>
         </div>
       </div>
