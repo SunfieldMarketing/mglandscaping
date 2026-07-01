@@ -378,7 +378,7 @@ const ServiceArea = () => {
   ];
 
   return (
-    <section id="service-area" className="py-32 bg-primary-dark text-white relative overflow-hidden">`n      <div className="absolute inset-0 bg-grid-pattern-light opacity-[0.02]"></div>
+    <section id="service-area" className="py-32 bg-primary-dark text-white relative overflow-hidden">`n      
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -394,12 +394,12 @@ const ServiceArea = () => {
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {cities.map((city, idx) => (
-                <div key={idx} className="p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 hover:border-primary/50 transition-colors">
-                  <div className="flex items-center gap-2 text-white font-bold mb-1">
-                    <MapPin size={18} className="text-primary-light" />
+                <div key={idx} className="p-4 bg-white rounded-xl shadow-lg shadow-black/5 border border-transparent hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-2 text-primary-dark font-bold mb-1">
+                    <MapPin size={18} className="text-primary" />
                     {city.name}
                   </div>
-                  <p className="text-xs text-green-50/70 font-mono pl-6">{city.zips}</p>
+                  <p className="text-xs text-gray-500 font-mono pl-6">{city.zips}</p>
                 </div>
               ))}
             </div>
@@ -457,7 +457,7 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="py-32 bg-gray-50 relative overflow-hidden">
-
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Questions</h2>
