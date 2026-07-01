@@ -32,7 +32,7 @@ const Hero = () => {
       {/* Darker Landscape Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/img/hero_bg_1782917318254.png"
+          src="https://picsum.photos/seed/landscape/1920/1080"
           alt="Landscaping Background"
           className="w-full h-full object-cover opacity-60"
           referrerPolicy="no-referrer"
@@ -198,7 +198,7 @@ const WhyChooseUs = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
-              <img src="/img/about_landscaper_1782917381903.png" alt="Professional Landscaper" className="w-full h-auto" referrerPolicy="no-referrer" />
+              <img src="https://i.ibb.co/rGdnKR1X/image.png" alt="Professional Landscaper" className="w-full h-auto" referrerPolicy="no-referrer" />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-primary text-white p-8 rounded-3xl shadow-xl z-20 hidden md:block">
               <p className="text-4xl font-bold mb-1">15+</p>

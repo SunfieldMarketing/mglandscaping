@@ -7,15 +7,18 @@ import {
   Facebook, 
   Instagram, 
   Mail,
-  MessageSquare
+  MessageSquare,
+  ChevronDown
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useLocation } from 'react-router-dom';
+import { servicesData } from '../servicesData';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -38,15 +41,56 @@ export const Navbar = () => {
           
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Home</Link>
+            
+            <div className="relative" onMouseLeave={() => setServicesOpen(false)}>
+              <div className="flex items-center">
+                {isHome ? (
+                  <a href="#services" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors pr-1">Services</a>
+                ) : (
+                  <Link to="/#services" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors pr-1">Services</Link>
+                )}
+                <button 
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  onMouseEnter={() => setServicesOpen(true)}
+                  className="text-gray-700 hover:text-primary p-1 focus:outline-none"
+                >
+                  <ChevronDown size={16} className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+              </div>
+
+              <AnimatePresence>
+                {servicesOpen && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
+                  >
+                    <div className="py-2">
+                      {servicesData.map(service => (
+                        <Link 
+                          key={service.id} 
+                          to={`/services/${service.slug}`}
+                          onClick={() => setServicesOpen(false)}
+                          className="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-primary transition-colors"
+                        >
+                          {service.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             {isHome ? (
               <>
-                <a href="#services" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Services</a>
                 <a href="#about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">About</a>
                 <a href="#service-area" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Service Area</a>
               </>
             ) : (
               <>
-                <Link to="/#services" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Services</Link>
                 <Link to="/#about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">About</Link>
                 <Link to="/#service-area" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Service Area</Link>
               </>
@@ -78,9 +122,54 @@ export const Navbar = () => {
           >
             <div className="px-4 pt-2 pb-6 space-y-2">
               <Link to="/" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">Home</Link>
-              <Link to="/#services" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">Services</Link>
-              <Link to="/#about" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">About</Link>
-              <Link to="/#service-area" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">Service Area</Link>
+              
+              <div className="block">
+                <div className="flex items-center justify-between px-4 py-4 hover:bg-green-50 rounded-xl transition-colors">
+                  {isHome ? (
+                    <a href="#services" onClick={() => setIsOpen(false)} className="text-lg font-semibold text-gray-800 flex-grow">Services</a>
+                  ) : (
+                    <Link to="/#services" onClick={() => setIsOpen(false)} className="text-lg font-semibold text-gray-800 flex-grow">Services</Link>
+                  )}
+                  <button onClick={() => setServicesOpen(!servicesOpen)} className="p-2 -mr-2 text-gray-800 hover:text-primary focus:outline-none">
+                    <ChevronDown size={24} className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
+                <AnimatePresence>
+                  {servicesOpen && (
+                    <motion.div 
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden bg-gray-50 rounded-xl mx-2 mt-1"
+                    >
+                      <div className="py-2">
+                        {servicesData.map(service => (
+                          <Link 
+                            key={service.id} 
+                            to={`/services/${service.slug}`}
+                            onClick={() => setIsOpen(false)}
+                            className="block px-6 py-3 text-base font-medium text-gray-700 hover:text-primary transition-colors"
+                          >
+                            {service.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {isHome ? (
+                <>
+                  <a href="#about" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">About</a>
+                  <a href="#service-area" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">Service Area</a>
+                </>
+              ) : (
+                <>
+                  <Link to="/#about" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">About</Link>
+                  <Link to="/#service-area" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-lg font-semibold text-gray-800 hover:bg-green-50 hover:text-primary rounded-xl transition-colors">Service Area</Link>
+                </>
+              )}
               <div className="pt-4 px-2">
                 <a 
                   href="tel:7604023315" 
