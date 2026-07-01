@@ -317,13 +317,14 @@ const SocialProof = () => {
   ];
 
   return (
-    <section className="py-32 bg-primary-dark text-white overflow-hidden relative">
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary rounded-full blur-[100px] opacity-50 -mr-[400px] -mt-[400px]"></div>
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary rounded-full blur-[80px] opacity-30 -ml-[300px] -mb-[300px]"></div>
+    <section className="py-32 bg-white text-gray-900 overflow-hidden relative">
+      <div className="absolute inset-0 bg-dot-matrix opacity-10"></div>
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-green-50 rounded-full blur-[100px] opacity-50 -mr-[400px] -mt-[400px]"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-green-50 rounded-full blur-[80px] opacity-30 -ml-[300px] -mb-[300px]"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Social Proof</h2>
+          <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Reviews</h2>
           <h3 className="text-4xl md:text-5xl font-display font-extrabold mb-6">Loved by Our Community</h3>
           <div className="flex justify-center items-center gap-2 text-xl font-medium">
             <span className="text-yellow-400 flex">
@@ -341,7 +342,7 @@ const SocialProof = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-3xl hover:bg-white/15 transition-colors"
+              className="bg-white border border-gray-100 shadow-xl p-8 rounded-3xl hover:border-primary/20 transition-colors"
             >
               <div className="flex text-yellow-400 mb-6">
                 {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
@@ -353,7 +354,7 @@ const SocialProof = () => {
                 </div>
                 <div>
                   <h4 className="font-bold">{review.name}</h4>
-                  <p className="text-sm text-green-200">{review.role}</p>
+                  <p className="text-sm text-gray-500">{review.role}</p>
                 </div>
               </div>
             </motion.div>
@@ -374,8 +375,9 @@ const ServiceArea = () => {
   ];
 
   return (
-    <section id="service-area" className="py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="service-area" className="py-32 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-dot-matrix opacity-10"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Service Area</h2>
