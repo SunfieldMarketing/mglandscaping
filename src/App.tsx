@@ -182,7 +182,7 @@ const TrustBadges = () => {
 const Services = () => {
   return (
     <section id="services" className="py-32 bg-gray-50 relative overflow-hidden">
-
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Our Expertise</h2>
@@ -237,7 +237,7 @@ const WhyChooseUs = () => {
 
   return (
     <section id="about" className="py-32 bg-primary-dark text-white overflow-hidden relative">
-      <div className="absolute inset-0 bg-circuit-board opacity-5"></div>
+      <div className="absolute inset-0 bg-grid-pattern-light opacity-5"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
@@ -375,44 +375,44 @@ const ServiceArea = () => {
   ];
 
   return (
-    <section id="service-area" className="py-32 bg-white relative overflow-hidden">
-
+    <section id="service-area" className="py-32 bg-primary-dark text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern-light opacity-5"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Service Area</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-8">Serving San Marcos & Surrounding Areas</h3>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Service Area</h2>
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-8">Serving San Marcos & Surrounding Areas</h3>
+            <p className="text-lg text-green-50/80 mb-6 leading-relaxed">
               MG-Landscaping is a premier landscaping maintenance and construction company proudly serving San Marcos, La Costa, Escondido, Cardiff, and Carlsbad. We specialize in transforming outdoor spaces with unmatched expertise and care.
             </p>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="text-lg text-green-50/80 mb-8 leading-relaxed">
               Whether you need a complete garden overhaul, reliable routine maintenance, or specialized tree care, our dedicated team brings passion and precision to every project. We don't just maintain yards; we cultivate outdoor experiences.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {cities.map((city, idx) => (
-                <div key={idx} className="p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-primary/30 transition-colors">
-                  <div className="flex items-center gap-2 text-gray-900 font-bold mb-1">
-                    <MapPin size={18} className="text-primary" />
+                <div key={idx} className="p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-2 text-white font-bold mb-1">
+                    <MapPin size={18} className="text-primary-light" />
                     {city.name}
                   </div>
-                  <p className="text-xs text-gray-500 font-mono pl-6">{city.zips}</p>
+                  <p className="text-xs text-green-50/70 font-mono pl-6">{city.zips}</p>
                 </div>
               ))}
             </div>
 
-            <div className="inline-flex items-center gap-3 bg-green-50 text-primary-dark px-6 py-4 rounded-xl font-semibold w-full sm:w-auto">
-              <CheckCircle2 className="text-primary" size={24} />
+            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/10 text-white px-6 py-4 rounded-xl font-semibold w-full sm:w-auto">
+              <CheckCircle2 className="text-primary-light" size={24} />
               We serve San Marcos and surrounding areas
             </div>
           </div>
 
-          <div className="relative h-[400px] md:h-[500px] bg-gray-100 rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+          <div className="relative h-[400px] md:h-[500px] bg-white/5 rounded-3xl overflow-hidden premium-shadow border border-white/10 p-2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107449.19951859664!2d-117.2023199!3d33.1433723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc743c3a9f0e1d%3A0xc6c78e1b12b504a5!2sSan%20Marcos%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
               width="100%"
               height="100%"
-              style={{ border: 0 }}
+              style={{ border: 0, borderRadius: '1.5rem' }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
