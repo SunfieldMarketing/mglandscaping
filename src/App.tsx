@@ -368,10 +368,13 @@ const SocialProof = () => {
 const ServiceArea = () => {
   const cities = [
     { name: "San Marcos", zips: "92069, 92078, 92096" },
-    { name: "La Costa", zips: "92009" },
+    { name: "Carlsbad", zips: "92008, 92009, 92010, 92011" },
     { name: "Escondido", zips: "92025, 92026, 92027, 92029" },
-    { name: "Cardiff", zips: "92007" },
-    { name: "Carlsbad", zips: "92008, 92010, 92011" }
+    { name: "Oceanside", zips: "92054, 92056, 92057, 92058" },
+    { name: "Vista", zips: "92081, 92083, 92084, 92085" },
+    { name: "Encinitas", zips: "92024, 92007" },
+    { name: "San Diego", zips: "North County" },
+    { name: "Temecula", zips: "92590, 92591, 92592" }
   ];
 
   return (
@@ -401,9 +404,9 @@ const ServiceArea = () => {
               ))}
             </div>
 
-            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/10 text-white px-6 py-4 rounded-xl font-semibold w-full sm:w-auto">
-              <CheckCircle2 className="text-primary-light" size={24} />
-              We serve San Marcos and surrounding areas
+            <div className="flex items-center justify-center gap-3 bg-white text-primary-dark px-6 py-5 rounded-xl font-bold w-full shadow-lg shadow-black/10 mt-2">
+              <CheckCircle2 className="text-primary" size={24} />
+              Serving all cities and zip codes within a 50-mile radius
             </div>
           </div>
 

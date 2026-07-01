@@ -30,29 +30,29 @@ export const Navbar = () => {
   const isHome = location.pathname === '/';
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'glass-morphism py-5 border-b border-gray-100/50'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3 text-gray-800' : 'bg-transparent py-5 text-white border-b border-white/10'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold tracking-tighter text-primary-dark">
-              MG <span className="text-primary">Landscaping</span>
+            <span className={`text-2xl font-bold tracking-tighter transition-colors ${scrolled ? 'text-primary-dark' : 'text-white'}`}>
+              MG <span className={scrolled ? 'text-primary' : 'text-primary-light'}>Landscaping</span>
             </span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Home</Link>
+            <Link to="/" className={`text-sm font-semibold transition-colors ${scrolled ? 'text-gray-700 hover:text-primary' : 'text-white/90 hover:text-white'}`}>Home</Link>
             
             <div className="relative" onMouseLeave={() => setServicesOpen(false)} onMouseEnter={() => setServicesOpen(true)}>
               <div className="flex items-center">
                 {isHome ? (
-                  <a href="#services" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors pr-1">Services</a>
+                  <a href="#services" className={`text-sm font-semibold transition-colors pr-1 ${scrolled ? 'text-gray-700 hover:text-primary' : 'text-white/90 hover:text-white'}`}>Services</a>
                 ) : (
-                  <Link to="/#services" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors pr-1">Services</Link>
+                  <Link to="/#services" className={`text-sm font-semibold transition-colors pr-1 ${scrolled ? 'text-gray-700 hover:text-primary' : 'text-white/90 hover:text-white'}`}>Services</Link>
                 )}
                 <button 
                   onClick={() => setServicesOpen(!servicesOpen)}
                   onMouseEnter={() => setServicesOpen(true)}
-                  className="text-gray-700 hover:text-primary p-1 focus:outline-none"
+                  className={`p-1 focus:outline-none transition-colors ${scrolled ? 'text-gray-700 hover:text-primary' : 'text-white/90 hover:text-white'}`}
                 >
                   <ChevronDown size={16} className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -88,13 +88,13 @@ export const Navbar = () => {
 
             {isHome ? (
               <>
-                <Link to="/about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">About</Link>
-                <Link to="/contact" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Contact</Link>
+                <Link to="/about" className={`text-sm font-semibold transition-colors ${scrolled ? 'text-gray-700 hover:text-primary' : 'text-white/90 hover:text-white'}`}>About</Link>
+                <Link to="/contact" className={`text-sm font-semibold transition-colors ${scrolled ? 'text-gray-700 hover:text-primary' : 'text-white/90 hover:text-white'}`}>Contact</Link>
               </>
             ) : (
               <>
-                <Link to="/about" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">About</Link>
-                <Link to="/contact" className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Contact</Link>
+                <Link to="/about" className={`text-sm font-semibold transition-colors ${scrolled ? 'text-gray-700 hover:text-primary' : 'text-white/90 hover:text-white'}`}>About</Link>
+                <Link to="/contact" className={`text-sm font-semibold transition-colors ${scrolled ? 'text-gray-700 hover:text-primary' : 'text-white/90 hover:text-white'}`}>Contact</Link>
               </>
             )}
             <a 
@@ -106,7 +106,7 @@ export const Navbar = () => {
           </div>
 
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-primary-dark p-2 -mr-2">
+            <button onClick={() => setIsOpen(!isOpen)} className={`p-2 -mr-2 transition-colors ${scrolled ? 'text-primary-dark' : 'text-white'}`}>
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
