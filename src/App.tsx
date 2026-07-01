@@ -378,28 +378,27 @@ const ServiceArea = () => {
   ];
 
   return (
-    <section id="service-area" className="py-32 bg-primary-dark text-white relative overflow-hidden">`n      
-      
+    <section id="service-area" className="py-24 bg-primary-dark text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Service Area</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-8">Serving San Marcos & Surrounding Areas</h3>
-            <p className="text-lg text-green-50/80 mb-6 leading-relaxed">
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">Serving San Marcos & Surrounding Areas</h3>
+            <p className="text-lg text-green-50/80 mb-4 leading-relaxed">
               MG-Landscaping is a premier landscaping maintenance and construction company proudly serving San Marcos, La Costa, Escondido, Cardiff, and Carlsbad. We specialize in transforming outdoor spaces with unmatched expertise and care.
             </p>
-            <p className="text-lg text-green-50/80 mb-8 leading-relaxed">
+            <p className="text-lg text-green-50/80 mb-6 leading-relaxed">
               Whether you need a complete garden overhaul, reliable routine maintenance, or specialized tree care, our dedicated team brings passion and precision to every project. We don't just maintain yards; we cultivate outdoor experiences.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <div className="grid sm:grid-cols-2 gap-3 mb-6">
               {cities.map((city, idx) => (
-                <div key={idx} className="p-4 bg-white rounded-xl shadow-lg shadow-black/5 border border-transparent hover:border-primary/50 transition-colors">
-                  <div className="flex items-center gap-2 text-primary-dark font-bold mb-1">
-                    <MapPin size={18} className="text-primary" />
+                <div key={idx} className="p-3 bg-white rounded-xl shadow-lg shadow-black/5 border border-transparent hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-2 text-primary-dark font-bold mb-0.5 text-sm">
+                    <MapPin size={16} className="text-primary" />
                     {city.name}
                   </div>
-                  <p className="text-xs text-gray-500 font-mono pl-6">{city.zips}</p>
+                  <p className="text-[11px] text-gray-500 font-mono pl-6 leading-tight">{city.zips}</p>
                 </div>
               ))}
             </div>
@@ -410,7 +409,7 @@ const ServiceArea = () => {
             </div>
           </div>
 
-          <div className="relative h-[400px] md:h-[500px] bg-white/5 rounded-3xl overflow-hidden premium-shadow border border-white/10 p-2">
+          <div className="relative h-full min-h-[500px] w-full bg-white/5 rounded-3xl overflow-hidden premium-shadow border border-white/10 p-2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107449.19951859664!2d-117.2023199!3d33.1433723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc743c3a9f0e1d%3A0xc6c78e1b12b504a5!2sSan%20Marcos%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
               width="100%"
