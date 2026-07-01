@@ -142,7 +142,7 @@ const Hero = () => {
 const TrustBadges = () => {
   return (
     <section className="py-12 bg-white border-y border-gray-100 relative overflow-hidden">
-      <div className="absolute inset-0 bg-diagonal-lines opacity-[0.03]"></div>
+
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-50 rounded-full blur-[80px] opacity-40 -mr-[250px] -mt-[250px]"></div>
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary-light/10 rounded-full blur-[60px] opacity-30 -ml-[150px] -mb-[150px]"></div>
       
@@ -182,7 +182,7 @@ const TrustBadges = () => {
 const Services = () => {
   return (
     <section id="services" className="py-32 bg-gray-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-diagonal-lines opacity-[0.15]"></div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Our Expertise</h2>
@@ -237,7 +237,7 @@ const WhyChooseUs = () => {
 
   return (
     <section id="about" className="py-32 bg-primary-dark text-white overflow-hidden relative">
-      <div className="absolute inset-0 bg-circuit-board opacity-20"></div>
+      <div className="absolute inset-0 bg-circuit-board opacity-5"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
@@ -318,7 +318,7 @@ const SocialProof = () => {
 
   return (
     <section className="py-32 bg-white text-gray-900 overflow-hidden relative">
-      <div className="absolute inset-0 bg-dot-matrix opacity-10"></div>
+
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-green-50 rounded-full blur-[100px] opacity-50 -mr-[400px] -mt-[400px]"></div>
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-green-50 rounded-full blur-[80px] opacity-30 -ml-[300px] -mb-[300px]"></div>
 
@@ -376,7 +376,7 @@ const ServiceArea = () => {
 
   return (
     <section id="service-area" className="py-32 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-dot-matrix opacity-10"></div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -454,7 +454,7 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="py-32 bg-gray-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-diagonal-lines opacity-[0.15]"></div>
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Questions</h2>
