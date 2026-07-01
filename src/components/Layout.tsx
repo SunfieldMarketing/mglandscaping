@@ -30,7 +30,7 @@ export const Navbar = () => {
   const isHome = location.pathname === '/';
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3 text-gray-800' : 'bg-transparent py-5 text-white border-b border-white/10'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/70 backdrop-blur-lg shadow-sm py-3 text-gray-800 border-b border-white/50' : 'bg-transparent py-5 text-white border-b border-white/10'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
