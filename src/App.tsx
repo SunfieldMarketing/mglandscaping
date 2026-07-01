@@ -182,7 +182,7 @@ const TrustBadges = () => {
 const Services = () => {
   return (
     <section id="services" className="py-32 bg-gray-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-primary-light font-bold tracking-widest uppercase text-sm mb-4">Our Expertise</h2>
@@ -237,7 +237,7 @@ const WhyChooseUs = () => {
 
   return (
     <section id="about" className="py-32 bg-primary-dark text-white overflow-hidden relative">
-      <div className="absolute inset-0 bg-grid-pattern-light opacity-5"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
@@ -375,8 +375,8 @@ const ServiceArea = () => {
   ];
 
   return (
-    <section id="service-area" className="py-32 bg-primary-dark text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern-light opacity-5"></div>
+    <section id="service-area" className="py-32 bg-primary-dark text-white relative overflow-hidden">`n      <div className="absolute inset-0 bg-grid-pattern-light opacity-[0.02]"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
